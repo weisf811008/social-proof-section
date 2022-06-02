@@ -1,0 +1,32 @@
+.rate {
+  background-color: var(--secondary-light);
+  border-radius: var(--2);
+  padding: var(--4);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--2);
+}
+
+.rate ul {
+  display: flex;
+  gap: var(--2);
+}
+
+.rate strong {
+    font-size: var(--3);
+    color: var(--primary);
+}
+
+@media (min-width: 640px) {
+  .rate {
+    flex-direction: row;
+  }
+  .rate > * {
+    flex: 1;
+  }
+  .rate ul {
+    justify-content: center;
+  }
+}
