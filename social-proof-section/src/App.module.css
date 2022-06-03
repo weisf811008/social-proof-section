@@ -11,6 +11,7 @@
   --8: 2rem;
   --9: 2.25rem;
   --10: 2.5rem;
+  --15: 3.25rem;
   --20: 5rem;
   --1\/2: 50%;
   --full: 100%;
@@ -38,6 +39,29 @@
   position: relative;
 }
 
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--4);
+}
+
+@media (min-width: 640px) {
+  .header {
+    text-align: start;
+  }
+}
+
+
+.title {
+  padding-inline: var(--2);
+  color: var(--primary);
+}
+
+.description {
+  line-height: var(--6);
+  color: var(--secondary);
+}
 
 .main::before {
   content: "";
@@ -108,34 +132,6 @@
   
 }
 
-
-.header {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: var(--4);
-}
-
-@media (min-width: 640px) {
-  .header {
-    text-align: start;
-  }
-  .title {
-    font-size: var(--12);
-  }
-}
-
-
-.title {
-  padding-inline: var(--2);
-  color: var(--primary);
-}
-
-.description {
-  line-height: var(--6);
-  color: var(--secondary);
-}
-
 .list{
 display: flex;
 flex-direction: column;
@@ -143,11 +139,15 @@ gap: var(--4);
 }
 
 @media (min-width: 768px) {
+  .list.rate {
+    margin-right: var(--15);
+  }
+
   .list.rate > li:nth-child(2) {
-    transform: translateX(calc(1 * var(--16)));
+    transform: translateX(calc(1 * var(--8)));
   }
   .list.rate > li:nth-child(3) {
-    transform: translateX(calc(2 * var(--16)));
+    transform: translateX(calc(2 * var(--8)));
   }
 
   .list.comment {

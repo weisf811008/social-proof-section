@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./App.module.css";
-import comment from "./Comment.module.css";
 import rate from "./Rate.module.css";
+import comment from "./Comment.module.css";
 
 import { ReactComponent as IconStar } from "./images/icon-star.svg";
 import PictureColton from "./images/image-colton.jpg";
@@ -58,11 +58,7 @@ function Comment(props) {
           </span>
         </div>
       </header>
-      <p>
-        "We needed the same printed design as the one we had ordered a week
-        prior. Not only did they find the original order, but we also received
-        it in time. Excellent!"
-      </p>
+      <p>{props.connent}</p>
     </div>
   );
 }
